@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mikehome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+  :root {
+    --plain-bg: #1c1410;
+    --plain-text: #faf5f0;
+    --plain-muted: #c4a882;
+    --plain-primary: #9c4221;
+    --plain-secondary: #c05621;
+    --plain-accent: #dd6b20;
+    --plain-bg-light: #2d241e;
+    --plain-body-font: "PT Serif", Georgia, serif;
+    --plain-title-font: "PT Serif", Georgia, serif;
+    --plain-mono-font: Consolas, monospace;
+  }
+  body {
+    font-family: var(--plain-body-font);
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 1em;
+    line-height: 1.6;
+    color: var(--plain-text);
+    background: var(--plain-bg);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--plain-title-font);
+    color: var(--plain-text);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+  p { margin: 0.75em 0; }
+  pre {
+    background: var(--plain-bg-light);
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: var(--plain-mono-font);
+  }
+  code {
+    background: var(--plain-bg-light);
+    padding: 0.15em 0.3em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: var(--plain-mono-font);
+  }
+  pre code { background: none; padding: 0; }
+  blockquote {
+    border-left: 3px solid var(--plain-primary);
+    margin-left: 0;
+    padding-left: 1em;
+    color: var(--plain-muted);
+  }
+  /* See DEFAULT_CSS comment: only auto-scale height when the author
+     didn't set explicit width/height attributes. */
+  img { max-width: 100%; }
+  img:not([width]):not([height]) { height: auto; }
+  a { color: var(--plain-primary); }
+  a:hover { color: var(--plain-accent); }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td {
+    border: 1px solid color-mix(in srgb, var(--plain-muted) 30%, transparent);
+    padding: 6px 10px;
+    text-align: left;
+  }
+  th {
+    background: var(--plain-bg-light);
+    color: var(--plain-text);
+    font-family: var(--plain-title-font);
+    font-weight: 600;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid color-mix(in srgb, var(--plain-muted) 40%, transparent);
+    margin: 1.5em 0;
+  }
+  .squisq-feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: center;
+    margin: 1.75em 0;
+  }
+  .squisq-feature--right { flex-direction: row-reverse; }
+  .squisq-feature__media {
+    flex: 0 0 42%;
+    min-width: 0;
+  }
+  .squisq-feature__media--empty { display: none; }
+  /* Default: image fills the media column. */
+  .squisq-feature__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  /* "Sized" media: the image carried explicit width/height attrs (the
+     WYSIWYG editor wrote them after a resize). Honor the attribute
+     values and center the image inside the media column with padding. */
+  .squisq-feature__media--sized {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  /* Leave width and height untouched here -- the HTML attributes set
+     the intrinsic dimensions, and CSS overrides would silently discard
+     the author's sizing. max-width: 100% still keeps the image from
+     overflowing the column on narrow viewports; HTML5 derives the
+     aspect ratio from the width/height pair so the scale stays right. */
+  .squisq-feature__media--sized img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  .squisq-feature__body {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .squisq-feature__body > :first-child { margin-top: 0; }
+  .squisq-feature__body > :last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .squisq-feature, .squisq-feature--right { flex-direction: column; }
+    .squisq-feature__media { flex-basis: auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<section class="squisq-feature squisq-feature--left">
+<div class="squisq-feature__media squisq-feature__media--sized"><img src="mikehome_files/6c61328d-950a-4da2-b42b-79fdcad40aa0.png" alt="6c61328d 950a 4da2 b42b 79fdcad40aa0" width="82" height="88" /></div>
+<div class="squisq-feature__body">
+<h1>Mike Ammerlaan</h1>
+</div>
+</section>
+<h2>Product Builder</h2>
+<p>I love building software, and I love building software platforms.</p>
+<p><i class="fa-brands fa-github" data-icon="github" aria-hidden="true"></i>: <a href="https://github.com/mammerla">mammerla</a></p>
+<p><i class="fa-brands fa-bluesky" data-icon="bluesky" aria-hidden="true"></i>: <a href="https://bsky.app/profile/mikeamm.bsky.social">mikeamm</a></p>
+<p><i class="fa-brands fa-square-x-twitter" data-icon="square-x-twitter" aria-hidden="true"></i>: <a href="https://x.com/mikeamm">mikeamm</a></p>
+<h2>Projects</h2>
+<h3>Minecraft Platform</h3>
+<p>I work on the Minecraft creator platform and associated tooling at Mojang.</p>
+<ul><li><p>We launched the scripting platform for Minecraft, which was essential for launching new categories of content for Minecraft (add-ons)</p></li><li><p>I spec'ed and largely built the Minecraft Creator Tools suite, including <a href="https://www.npmjs.com/package/@minecraft/creator-tools">a website</a> for beginning to advanced creators and <a href="https://www.npmjs.com/package/@minecraft/creator-tools">set of NPM commands</a> and tools.</p></li><li><p>I manage and craft the <a href="https://github.com/microsoft/minecraft-samples">Minecraft samples</a> and <a href="">documentation suite</a></p></li><li><p>I produce and create the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel on YouTube</a></p></li></ul>
+<h3>Developer Ecosystem Marketing</h3>
+<ul><li><p>Managed executive keynotes at major Microsoft conferences</p></li><li><p>Delivered end-to-end conference presence and execution</p></li><li><p>Inaugurated a comprehensive partner program with top ISV partners</p></li></ul>
+<p>See the <a href="resume.html">Resume</a> for more.</p>
+</body>
+</html>
