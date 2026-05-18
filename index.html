@@ -4,29 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mikehome</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style>
   :root {
-    --plain-bg: #1c1410;
-    --plain-text: #faf5f0;
-    --plain-muted: #c4a882;
-    --plain-primary: #9c4221;
-    --plain-secondary: #c05621;
-    --plain-accent: #dd6b20;
-    --plain-bg-light: #2d241e;
-    --plain-body-font: "PT Serif", Georgia, serif;
-    --plain-title-font: "PT Serif", Georgia, serif;
-    --plain-mono-font: Consolas, monospace;
+    --plain-bg: #1f1a17;
+    --plain-text: #f3ede0;
+    --plain-muted: #a89b85;
+    --plain-primary: #b0724c;
+    --plain-secondary: #667f62;
+    --plain-accent: #c0875d;
+    --plain-bg-light: #2b2420;
+    --plain-body-font: system-ui, -apple-system, "Segoe UI", Roboto, "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    --plain-title-font: Georgia, "Times New Roman", "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", serif;
+    --plain-mono-font: Consolas, "Courier New", monospace;
   }
   body {
     font-family: var(--plain-body-font);
     max-width: 800px;
     margin: 2em auto;
     padding: 0 1em;
-    line-height: 1.6;
+    line-height: 1.55;
     color: var(--plain-text);
     background: var(--plain-bg);
   }
@@ -64,7 +61,17 @@
      didn't set explicit width/height attributes. */
   img { max-width: 100%; }
   img:not([width]):not([height]) { height: auto; }
-  a { color: var(--plain-primary); }
+  /* Blend the theme primary toward the body text color so links stay
+     theme-flavored but read clearly on every theme's background — some
+     themes (e.g. Gezellig) pick a mid-tone primary that's almost
+     invisible on a dark page when used neat. Underline makes the link
+     unambiguous independent of the color contrast. */
+  a {
+    color: color-mix(in srgb, var(--plain-primary) 65%, var(--plain-text));
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
   a:hover { color: var(--plain-accent); }
   table { border-collapse: collapse; width: 100%; margin: 1em 0; }
   th, td {
@@ -137,9 +144,10 @@
 </head>
 <body>
 <section class="squisq-feature squisq-feature--left">
-<div class="squisq-feature__media squisq-feature__media--sized"><img src="mikehome_files/6c61328d-950a-4da2-b42b-79fdcad40aa0.png" alt="6c61328d 950a 4da2 b42b 79fdcad40aa0" width="82" height="88" /></div>
+<div class="squisq-feature__media squisq-feature__media--sized"><img src="mikehome_files/mikerv.jpg" alt="Mike Ammerlaan" width="207" height="284" /></div>
 <div class="squisq-feature__body">
 <h1>Mike Ammerlaan</h1>
+<p>Principal PM at Mojang / Microsoft — Redmond, WA</p>
 </div>
 </section>
 <h2>Product Builder</h2>
@@ -151,16 +159,18 @@
 <h2>Projects</h2>
 <h3>Minecraft Platform</h3>
 <p>I work on the Minecraft creator platform and associated tooling at Mojang.</p>
-<ul><li><p>We launched the scripting platform for Minecraft, which was essential for launching new categories of content for Minecraft (add-ons)</p></li><li><p>I spec'ed and largely built the Minecraft Creator Tools suite, including <a href="https://www.npmjs.com/package/@minecraft/creator-tools">a website</a> for beginning to advanced creators and <a href="https://www.npmjs.com/package/@minecraft/creator-tools">set of NPM commands</a> and tools.</p></li><li><p>I manage and craft the <a href="https://github.com/microsoft/minecraft-samples">Minecraft samples</a> and <a href="">documentation suite</a></p></li><li><p>I produce and create the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel on YouTube</a></p></li></ul>
+<ul><li><p>We launched the scripting platform for Minecraft, which was essential for launching new categories of content for Minecraft (add-ons)</p></li><li><p>I spec'ed and largely built the Minecraft Creator Tools suite, including <a href="https://mctools.dev">a website</a> for beginning to advanced creators and <a href="https://www.npmjs.com/package/@minecraft/creator-tools">set of NPM commands</a> and tools.</p></li><li><p>I manage and craft the <a href="https://github.com/microsoft/minecraft-samples">Minecraft samples</a> and documentation suite</p></li><li><p>I produce and create the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel on YouTube</a></p></li></ul>
 <h3>Developer Ecosystem Marketing</h3>
 <ul><li><p>Managed executive keynotes at major Microsoft conferences (Microsoft Build)</p></li><li><p>Delivered end-to-end conference presence and execution</p></li><li><p>Inaugurated a comprehensive partner program with top ISV partners</p></li></ul>
 <h3>SharePoint and Excel</h3>
-<ul><li><p>Major areas of the f<a href="https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/hh147178(v=office.14)">irst SharePoint developer platform</a>, a cornerstone of a multi-billion dollar industry unto itself</p></li><li><p><a href="https://support.microsoft.com/en-us/office/add-a-background-color-to-a-sheet-tab-440b28f2-3146-4dca-95df-3b9d43acbe59">Sheet Tab Colors</a> and many other capabilities and platform elements of Excel.. a long time ago</p></li></ul>
+<ul><li><p>Major areas of the <a href="https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/hh147178(v=office.14)">first SharePoint developer platform</a>, a cornerstone of a multi-billion dollar industry unto itself</p></li><li><p><a href="https://support.microsoft.com/en-us/office/add-a-background-color-to-a-sheet-tab-440b28f2-3146-4dca-95df-3b9d43acbe59">Sheet Tab Colors</a> and many other capabilities and platform elements of Excel.. a long time ago</p></li></ul>
 <h3>Combat Flight Simulator 3 and Fighter Ace</h3>
 <ul><li><p><a href="https://en.wikipedia.org/wiki/Combat_Flight_Simulator_3">Program Manager</a> for the UX, several in-game experiences, and tooling and platform for CFS3</p></li><li><p>Ran Fighter Ace 3 with a partner developer</p></li></ul>
 <h3>Other Projects</h3>
+<ul><li><p>My Winnebago is quite the project, unfortunately</p></li></ul>
 <p>Stuff I built a long time ago</p>
 <ul><li><p><a href="https://archive.org/details/ToServeAndToProtect">To Serve and To Protect</a></p></li><li><p><a href="https://www.dosgames.com/game/snakefighter/">SnakeFighter</a></p></li></ul>
-<p>See the <a href="resume.html">Resume</a> for more.</p>
+<p>See the <a href="resume4.html">Resume</a> for more info.</p>
+<p>Reach out via email or Bluesky — I'm always up for a conversation about platforms, developer tools, or RVs.</p>
 </body>
 </html>

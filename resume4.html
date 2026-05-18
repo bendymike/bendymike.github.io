@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike Ammerlaan</title>
+<style>
+  :root {
+    --plain-bg: #1f1a17;
+    --plain-text: #f3ede0;
+    --plain-muted: #a89b85;
+    --plain-primary: #b0724c;
+    --plain-secondary: #667f62;
+    --plain-accent: #c0875d;
+    --plain-bg-light: #2b2420;
+    --plain-body-font: system-ui, -apple-system, "Segoe UI", Roboto, "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    --plain-title-font: Georgia, "Times New Roman", "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", serif;
+    --plain-mono-font: Consolas, "Courier New", monospace;
+  }
+  body {
+    font-family: var(--plain-body-font);
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 1em;
+    line-height: 1.55;
+    color: var(--plain-text);
+    background: var(--plain-bg);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--plain-title-font);
+    color: var(--plain-text);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+  p { margin: 0.75em 0; }
+  pre {
+    background: var(--plain-bg-light);
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: var(--plain-mono-font);
+  }
+  code {
+    background: var(--plain-bg-light);
+    padding: 0.15em 0.3em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: var(--plain-mono-font);
+  }
+  pre code { background: none; padding: 0; }
+  blockquote {
+    border-left: 3px solid var(--plain-primary);
+    margin-left: 0;
+    padding-left: 1em;
+    color: var(--plain-muted);
+  }
+  /* See DEFAULT_CSS comment: only auto-scale height when the author
+     didn't set explicit width/height attributes. */
+  img { max-width: 100%; }
+  img:not([width]):not([height]) { height: auto; }
+  /* Blend the theme primary toward the body text color so links stay
+     theme-flavored but read clearly on every theme's background — some
+     themes (e.g. Gezellig) pick a mid-tone primary that's almost
+     invisible on a dark page when used neat. Underline makes the link
+     unambiguous independent of the color contrast. */
+  a {
+    color: color-mix(in srgb, var(--plain-primary) 65%, var(--plain-text));
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--plain-accent); }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td {
+    border: 1px solid color-mix(in srgb, var(--plain-muted) 30%, transparent);
+    padding: 6px 10px;
+    text-align: left;
+  }
+  th {
+    background: var(--plain-bg-light);
+    color: var(--plain-text);
+    font-family: var(--plain-title-font);
+    font-weight: 600;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid color-mix(in srgb, var(--plain-muted) 40%, transparent);
+    margin: 1.5em 0;
+  }
+  .squisq-feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: center;
+    margin: 1.75em 0;
+  }
+  .squisq-feature--right { flex-direction: row-reverse; }
+  .squisq-feature__media {
+    flex: 0 0 42%;
+    min-width: 0;
+  }
+  .squisq-feature__media--empty { display: none; }
+  /* Default: image fills the media column. */
+  .squisq-feature__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  /* "Sized" media: the image carried explicit width/height attrs (the
+     WYSIWYG editor wrote them after a resize). Honor the attribute
+     values and center the image inside the media column with padding. */
+  .squisq-feature__media--sized {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  /* Leave width and height untouched here -- the HTML attributes set
+     the intrinsic dimensions, and CSS overrides would silently discard
+     the author's sizing. max-width: 100% still keeps the image from
+     overflowing the column on narrow viewports; HTML5 derives the
+     aspect ratio from the width/height pair so the scale stays right. */
+  .squisq-feature__media--sized img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  .squisq-feature__body {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .squisq-feature__body > :first-child { margin-top: 0; }
+  .squisq-feature__body > :last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .squisq-feature, .squisq-feature--right { flex-direction: column; }
+    .squisq-feature__media { flex-basis: auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<h1>Mike Ammerlaan</h1>
+<p>Principal Product Manager &amp; Builder — Sammamish, WA</p>
+<p><a href="mailto:ammerlaan@live.com">Email</a></p>
+<p><a href="https://www.linkedin.com/in/mike-ammerlaan/">LinkedIn</a></p>
+<p><a href="https://github.com/mammerla">GitHub</a></p>
+<p><a href="https://ammerlaan.us">ammerlaan.us</a></p>
+<h2>Summary</h2>
+<p>Product leader who codes and ships. 27 years building developer platforms and creator ecosystems at Microsoft/Mojang — SharePoint, Microsoft 365, Bing Maps, and Minecraft — with a recent focus on hands-on building with agentic AI. I like turning APIs and tools into thriving ecosystems.</p>
+<p><strong>Focus:</strong> Product leadership · Developer platforms · Agentic AI · Creator ecosystems · APIs &amp; SDKs · Go-to-market</p>
+<h2>Experience</h2>
+<p><strong>Principal Product Manager &amp; Builder — Minecraft, Mojang Studios</strong></p>
+<p>Dec 2023 – Present</p>
+<ul><li><p>Conceived, designed, and built most of <a href="https://mctools.dev">Minecraft Creator Tools</a> and the <a href="https://www.npmjs.com/package/@minecraft/creator-tools">@minecraft/creator-tools CLI</a>.</p></li><li><p>Shipped initial validator infrastructure and tools that raised content quality across hundreds of add-ons in the Minecraft Marketplace.</p></li><li><p>Delivered end-to-end web tooling for Minecraft spanning ~12 creator workloads.</p></li><li><p>Grew creator education via the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel</a>, including producing and running <a href="https://aka.ms/creatorcamp">Creator Camp</a>, an online conference for Minecraft creators that reached 2,000+ viewers.</p></li></ul>
+<p><strong>Principal Product Manager — Minecraft Bedrock Platform, Mojang Studios</strong></p>
+<p>Jan 2021 – Dec 2023</p>
+<ul><li><p>Drove creator-platform execution for Minecraft Bedrock.</p></li><li><p>Shipped <a href="https://learn.microsoft.com/minecraft/creator/documents/scripting/introduction">Script APIs</a>, unlocking entirely new genres of Bedrock content and driving Marketplace engagement.</p></li><li><p>Established API design guidelines that brought consistency and coherence across the Bedrock creator surface.</p></li></ul>
+<p><strong>Director — Microsoft 365 Ecosystem Marketing</strong></p>
+<p>Aug 2016 – Jan 2021</p>
+<ul><li><p>Led developer marketing for Microsoft Teams, Microsoft Graph, SharePoint, and the broader Microsoft 365 platform.</p></li><li><p>Delivered online and in-person developer presence (keynotes, sessions, docs, samples) across the M365 ecosystem.</p></li><li><p>Conceived and launched the Microsoft 365 partner program; grew program to dozens of active partners, and owned key partner relationships.</p></li></ul>
+<p><strong>Principal / Senior Program Manager — Bing Maps</strong></p>
+<p>Nov 2013 – Aug 2016</p>
+<ul><li><p>Built APIs and platform projects for Bing Maps, including the mapping API and platform within Microsoft Windows.</p></li><li><p>Modernized the Bing Maps website on top of new underlying map technologies.</p></li></ul>
+<p><strong>Technical Integration Manager — Yammer, Inc. (acquired by Microsoft)</strong></p>
+<p>Aug 2012 – Nov 2013</p>
+<ul><li><p>Spearheaded post-acquisition integration of Yammer into Microsoft — spanning product, licensing, and compliance — while shipping new capabilities and clients as Product Manager.</p></li></ul>
+<p><strong>Senior Program Manager — SharePoint Developer Platform</strong></p>
+<p>Mar 2011 – Aug 2012</p>
+<ul><li><p>Architected SharePoint's new cloud app model from spec through delivery, leading a team that shipped the platform and onboarded key partners.</p></li></ul>
+<p><strong>Senior Program Manager — Office Labs</strong></p>
+<p>May 2010 – Mar 2011</p>
+<ul><li><p>Rapidly prototyped next-gen productivity experiences, exploring social and platform concepts ahead of mainstream adoption.</p></li></ul>
+<p><strong>Program Manager II / Senior Program Manager — SharePoint</strong></p>
+<p>Aug 2003 – May 2010</p>
+<ul><li><p>Defined and shipped core extensibility features that became the foundation of the SharePoint Developer Platform — a key part of a billion-dollar ecosystem with thousands of vendors.</p></li></ul>
+<p><strong>Program Manager II — Aces Game Studio</strong></p>
+<p>Sep 2001 – Aug 2003</p>
+<ul><li><p>Shipped gameplay features across Combat Flight Simulator and Fighter Ace titles.</p></li></ul>
+<p><strong>Program Manager — Microsoft Excel</strong></p>
+<p>May 1999 – Sep 2001</p>
+<ul><li><p>Shipped productivity and developer features across Excel, Office Web Components, and Data Analyzer.</p></li></ul>
+<h2>Education</h2>
+<p><strong>University of Arizona</strong> — 1995–1999</p>
+<p>BS, Computer Science · BA (Honors), Communication · Graduated Summa Cum Laude</p>
+</body>
+</html>
