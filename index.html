@@ -3,182 +3,411 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mikehome</title>
+<title>Mike Ammerlaan · Founder of Bendyline</title>
+<meta name="description" content="Mike Ammerlaan builds software and software platforms. He runs Bendyline (Gezel, DocBlocks, Qualla) and spent more than 25 years on developer platforms at Microsoft and Mojang.">
+<link rel="canonical" href="https://ammerlaan.us/">
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1a17" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235c4a3a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='29' font-weight='700' text-anchor='middle' fill='%23faf8f5'%3EMA%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mike Ammerlaan">
+<meta property="og:description" content="Product builder and founder of Bendyline. Honest, free software: Gezel, DocBlocks, and Qualla.">
+<meta property="og:url" content="https://ammerlaan.us/">
+<meta property="og:image" content="https://ammerlaan.us/mikehome_files/headshot.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mikeamm">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<style>
-  :root {
-    --plain-bg: #1f1a17;
-    --plain-text: #f3ede0;
-    --plain-muted: #a89b85;
-    --plain-primary: #b0724c;
-    --plain-secondary: #667f62;
-    --plain-accent: #c0875d;
-    --plain-bg-light: #2b2420;
-    --plain-body-font: system-ui, -apple-system, "Segoe UI", Roboto, "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-    --plain-title-font: Georgia, "Times New Roman", "OpenMoji Color", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", serif;
-    --plain-mono-font: Consolas, "Courier New", monospace;
-  }
-  body {
-    font-family: var(--plain-body-font);
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 0 1em;
-    line-height: 1.55;
-    color: var(--plain-text);
-    background: var(--plain-bg);
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--plain-title-font);
-    color: var(--plain-text);
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    line-height: 1.25;
-    font-weight: 700;
-  }
-  p { margin: 0.75em 0; }
-  pre {
-    background: var(--plain-bg-light);
-    padding: 1em;
-    border-radius: 4px;
-    overflow-x: auto;
-    font-family: var(--plain-mono-font);
-  }
-  code {
-    background: var(--plain-bg-light);
-    padding: 0.15em 0.3em;
-    border-radius: 3px;
-    font-size: 0.9em;
-    font-family: var(--plain-mono-font);
-  }
-  pre code { background: none; padding: 0; }
-  blockquote {
-    border-left: 3px solid var(--plain-primary);
-    margin-left: 0;
-    padding-left: 1em;
-    color: var(--plain-muted);
-  }
-  /* See DEFAULT_CSS comment: only auto-scale height when the author
-     didn't set explicit width/height attributes. */
-  img { max-width: 100%; }
-  img:not([width]):not([height]) { height: auto; }
-  /* Blend the theme primary toward the body text color so links stay
-     theme-flavored but read clearly on every theme's background — some
-     themes (e.g. Gezellig) pick a mid-tone primary that's almost
-     invisible on a dark page when used neat. Underline makes the link
-     unambiguous independent of the color contrast. */
-  a {
-    color: color-mix(in srgb, var(--plain-primary) 65%, var(--plain-text));
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-  }
-  a:hover { color: var(--plain-accent); }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-  th, td {
-    border: 1px solid color-mix(in srgb, var(--plain-muted) 30%, transparent);
-    padding: 6px 10px;
-    text-align: left;
-  }
-  th {
-    background: var(--plain-bg-light);
-    color: var(--plain-text);
-    font-family: var(--plain-title-font);
-    font-weight: 600;
-  }
-  hr {
-    border: none;
-    border-top: 1px solid color-mix(in srgb, var(--plain-muted) 40%, transparent);
-    margin: 1.5em 0;
-  }
-  .squisq-feature {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    align-items: center;
-    margin: 1.75em 0;
-  }
-  .squisq-feature--right { flex-direction: row-reverse; }
-  .squisq-feature__media {
-    flex: 0 0 42%;
-    min-width: 0;
-  }
-  .squisq-feature__media--empty { display: none; }
-  /* Default: image fills the media column. */
-  .squisq-feature__media img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-  }
-  /* "Sized" media: the image carried explicit width/height attrs (the
-     WYSIWYG editor wrote them after a resize). Honor the attribute
-     values and center the image inside the media column with padding. */
-  .squisq-feature__media--sized {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    box-sizing: border-box;
-  }
-  /* Leave width and height untouched here -- the HTML attributes set
-     the intrinsic dimensions, and CSS overrides would silently discard
-     the author's sizing. max-width: 100% still keeps the image from
-     overflowing the column on narrow viewports; HTML5 derives the
-     aspect ratio from the width/height pair so the scale stays right. */
-  .squisq-feature__media--sized img {
-    max-width: 100%;
-    display: block;
-    border-radius: 6px;
-  }
-  .squisq-feature__body {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-  .squisq-feature__body > :first-child { margin-top: 0; }
-  .squisq-feature__body > :last-child { margin-bottom: 0; }
-  @media (max-width: 600px) {
-    .squisq-feature, .squisq-feature--right { flex-direction: column; }
-    .squisq-feature__media { flex-basis: auto; width: 100%; }
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<section class="squisq-feature squisq-feature--left">
-<div class="squisq-feature__media squisq-feature__media--sized"><img src="mikehome_files/mikerv.jpg" alt="Mike Ammerlaan" width="207" height="284" /></div>
-<div class="squisq-feature__body">
-<h1>Mike Ammerlaan</h1>
-<p><div>
-Product Builder, ex-Product Manager at Mojang / Microsoft
-</div><div>
-  <a href="https://qualla.com/sammamish-washington/">Sammamish, WA</a>
-</div></p>
-</div>
-</section>
-<h2>Product Builder</h2>
-<p>I love building software, and I love building software platforms.</p>
-<p><i class="fa-brands fa-github" data-icon="github" aria-hidden="true"></i>: <a href="https://github.com/mammerla">mammerla</a></p>
-<p><i class="fa-brands fa-bluesky" data-icon="bluesky" aria-hidden="true"></i>: <a href="https://bsky.app/profile/mikeamm.bsky.social">mikeamm</a></p>
-<p><i class="fa-brands fa-square-x-twitter" data-icon="square-x-twitter" aria-hidden="true"></i>: <a href="https://x.com/mikeamm">mikeamm</a></p>
-<p><i class="fa-solid fa-envelope" data-icon="fa-solid:envelope" aria-hidden="true"></i>: <a href="mailto:ammerlaan@live.com">ammerlaan@live.com</a></p>
-<p><i class="fa-brands fa-youtube" data-icon="youtube" aria-hidden="true"></i>: <a href="https://youtube.com/@bendyline">bendyline</a></p>
-<h2>Projects</h2>
-<h3>Bendyline</h3>
-<p><a href="https://bendyline.com">Bendyline</a> is my holding company for my software projects. I build honest, free software that hopefully makes the world a little better.</p>
-<ul><li><p><a href="https://gezel.com">Gezel</a> — Build a crew of AI companions with distinct roles and tools, with their conversations, memory, and work stored locally as ordinary files.</p></li><li><p><a href="https://docblocks.com">DocBlocks</a> — Create, edit, and produce rich media from Markdown and Squiggly Square documents.</p></li><li><p><a href="https://qualla.com">Qualla</a> — Visit the world through an endless stream of stories.</p></li><li><p><a href="https://squigglysquare.com">Squiggly Square</a> — A simple Markdown extension format for creating rich documents, available as reusable open-source components. Used in all of the aboe projects.</p></li></ul>
-<h3>Minecraft Platform</h3>
-<p>I worked on the Minecraft creator platform and associated tooling at Mojang.</p>
-<ul><li><p>We launched the scripting platform for Minecraft, which was essential for launching new categories of content for Minecraft (add-ons)</p></li><li><p>I spec'ed and largely built the Minecraft Creator Tools suite, including <a href="https://mctools.dev">a website</a> for beginning to advanced creators and <a href="https://www.npmjs.com/package/@minecraft/creator-tools">set of NPM commands</a> and tools.</p></li><li><p>I manage and craft the <a href="https://github.com/microsoft/minecraft-samples">Minecraft samples</a> and documentation suite</p></li><li><p>I produce and create the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel on YouTube</a></p></li></ul>
-<h3>Developer Ecosystem Marketing</h3>
-<ul><li><p>Managed executive keynotes at major Microsoft conferences (Microsoft Build)</p></li><li><p>Delivered end-to-end conference presence and execution</p></li><li><p>Inaugurated a comprehensive partner program with top ISV partners</p></li></ul>
-<h3>SharePoint and Excel</h3>
-<ul><li><p>Major areas of the <a href="https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/hh147178(v=office.14)">first SharePoint developer platform</a>, a cornerstone of a multi-billion dollar industry unto itself</p></li><li><p><a href="https://support.microsoft.com/en-us/office/add-a-background-color-to-a-sheet-tab-440b28f2-3146-4dca-95df-3b9d43acbe59">Sheet Tab Colors</a> and many other capabilities and platform elements of Excel.. a long time ago</p></li></ul>
-<h3>Combat Flight Simulator 3 and Fighter Ace</h3>
-<ul><li><p><a href="https://en.wikipedia.org/wiki/Combat_Flight_Simulator_3">Program Manager</a> for the UX, several in-game experiences, and tooling and platform for CFS3</p></li><li><p>Ran Fighter Ace 3 with a partner developer</p></li></ul>
-<h3>Other Projects</h3>
-<ul><li><p>My Winnebago is quite the project, unfortunately</p></li></ul>
-<p>Stuff I built a long time ago</p>
-<ul><li><p><a href="https://archive.org/details/ToServeAndToProtect">To Serve and To Protect</a></p></li><li><p><a href="https://www.dosgames.com/game/snakefighter/">SnakeFighter</a></p></li></ul>
-<p>See the <a href="resume4.html">Resume</a> for more info.</p>
-<p>Reach out via email or Bluesky — I'm always up for a conversation about platforms, developer tools, or RVs.</p>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-name" href="#top">ammerlaan.us</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#bendyline">Bendyline</a>
+      <a href="#writing">Blog</a>
+      <a href="#videos">Videos</a>
+      <a href="#background">Background</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <h1>Mike Ammerlaan</h1>
+        <p class="hero__tagline">I love building software, and I love building software platforms.</p>
+        <p class="hero__lead">These days I do that at <a href="https://bendyline.com">Bendyline</a>, my small software company, where I make honest, free tools like Gezel, DocBlocks, and Qualla. Before that, I spent more than 25 years at Microsoft and Mojang on developer platforms, from SharePoint and Microsoft 365 to the Minecraft creator platform.</p>
+        <div class="hero__actions">
+          <a class="btn" href="https://bendyline.com">Visit Bendyline</a>
+          <a class="btn btn--ghost" href="https://bendyline.com/posts/">Read blog posts</a>
+          <a class="btn btn--ghost" href="https://www.youtube.com/@bendyline">Watch on YouTube</a>
+        </div>
+        <ul class="social" aria-label="Elsewhere">
+          <li><a href="https://github.com/bendymike"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mike-ammerlaan/"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+          <li><a href="https://bsky.app/profile/mikeamm.bsky.social"><i class="fa-brands fa-bluesky" aria-hidden="true"></i>Bluesky</a></li>
+          <li><a href="https://x.com/mikeamm"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i>Twitter</a></li>
+          <li><a href="mailto:mikeamm@bendyline.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a></li>
+        </ul>
+      </div>
+      <figure class="hero__photo">
+        <img src="mikehome_files/mikerv-1000.jpg" width="727" height="1000" alt="Mike standing in front of his Winnebago, parked in the doorway of a towering wooden building under an “Entering Game of Thrones” sign">
+        <figcaption>Me and the Winnebago, out seeing more of the world.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Bendyline -->
+  <section class="section section--tint" id="bendyline">
+    <div class="wrap">
+      <div class="section-head brand-head">
+        <h2><a class="wordmark" href="https://bendyline.com"><img src="mikehome_files/bendyline-wordmark.webp" width="480" height="323" alt="Bendyline"></a></h2>
+        <div>
+          <p>Bendyline is my company, and it's where my passion projects live. I build free software with no tracking, no dark patterns, and no fine print. Your work stays in plain files that you own, and the foundations are open source for anyone to build on.</p>
+        </div>
+      </div>
+
+      <div class="products">
+        <article class="card product">
+          <div class="product__shot"><img src="mikehome_files/gezel-home.webp" width="1600" height="1111" loading="lazy" alt="Gezel's home screen, where the Meester has turned a bakery owner's request into a plan for three AI helpers"></div>
+          <div class="product__body">
+            <p class="product__meta">Desktop app · Early preview</p>
+            <h3><a class="stretched" href="https://gezel.com">Gezel</a></h3>
+            <p class="product__line">Hand off a job tonight. Review it in the morning.</p>
+            <p class="product__desc">A crew of AI helpers, including a researcher, a writer, and a developer, working on your own computer. They leave reports and suggested changes waiting for you, and your files only change when you say so.</p>
+            <span class="product__url">gezel.com ↗</span>
+          </div>
+        </article>
+
+        <article class="card product">
+          <div class="product__shot"><img src="mikehome_files/docblocks-editor.webp" width="1200" height="833" loading="lazy" alt="The DocBlocks editor: a welcome document with a diagram, beside a rail of slide previews"></div>
+          <div class="product__body">
+            <p class="product__meta">Web, desktop, VS Code &amp; CLI</p>
+            <h3><a class="stretched" href="https://docblocks.com">DocBlocks</a></h3>
+            <p class="product__line">Write once in Markdown. Publish it anywhere.</p>
+            <p class="product__desc">A local-first editor where one Markdown file can become a Word doc, a PDF, a slide deck, an e-book, or a video. No account and no lock-in: your documents stay plain .md files.</p>
+            <span class="product__url">docblocks.com ↗</span>
+          </div>
+        </article>
+
+        <article class="card product">
+          <div class="product__shot"><img src="mikehome_files/qualla-flow.webp" width="1600" height="1000" loading="lazy" alt="Qualla's Flow screen, “Swipe a stream of stories,” over a sunset sea"></div>
+          <div class="product__body">
+            <p class="product__meta">Web</p>
+            <h3><a class="stretched" href="https://qualla.com">Qualla</a></h3>
+            <p class="product__line">Visit the world through stories.</p>
+            <p class="product__desc">An endless stream of stories about places around the world, drawn from Wikipedia and Wikivoyage and retold with maps, photos, and narration. No account and no tracking. Just wander.</p>
+            <span class="product__url">qualla.com ↗</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subhead">Open-source foundations</h3>
+      <ul class="foundations">
+        <li class="card foundation">
+          <h4><a class="stretched" href="https://squigglysquare.com">Squiggly Square</a><span class="foundation__tag">Document format</span></h4>
+          <p>A small extension to Markdown that turns headings into slides, photo grids, maps, and charts, and converts to DOCX, PDF, EPUB, PPTX, and more. It powers the DocBlocks editor.</p>
+        </li>
+        <li class="card foundation">
+          <h4><a class="stretched" href="https://molen.dev">Molen</a><span class="foundation__tag">3D engine</span></h4>
+          <p>An AI-legible engine for games, visualizations, and interactive 3D experiences, with a headless kernel and dev loop an agent can drive end to end.</p>
+        </li>
+        <li class="card foundation">
+          <h4><a class="stretched" href="https://gezel.com/docs/npm-packages/">Gezel Platform</a><span class="foundation__tag">CLI, SDKs &amp; API</span></h4>
+          <p>The engine behind Gezel, open for you to build on. Drive it from the command line, connect your own software, and package workflows as apps your team can install.</p>
+        </li>
+        <li class="card foundation">
+          <h4><a class="stretched" href="https://bendyline.com/gezk/">gezk</a><span class="foundation__tag">File format</span></h4>
+          <p>An open format for packaging reference documents with full-text and vector indexes in a single portable file.</p>
+        </li>
+      </ul>
+
+      <div class="section-actions">
+        <a class="btn" href="https://bendyline.com">Explore bendyline.com</a>
+        <a class="text-link" href="https://github.com/bendyline">Bendyline on GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section class="section" id="writing">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div>
+          <h2>From the Bendyline blog</h2>
+          <p>I write about what I'm building and what I'm learning along the way: running AI models on your own hardware, putting machines to the test, and how Gezel and DocBlocks fit together.</p>
+        </div>
+        <a class="btn btn--ghost" href="https://bendyline.com/posts/">All posts ↗</a>
+      </div>
+
+      <!-- This list is the fallback. The script at the bottom of the page
+           replaces it with the latest posts from bendyline.com/posts/. -->
+      <ol class="posts" id="posts">
+        <li class="post"><a href="https://bendyline.com/posts/introducingknowledge.html">
+          <span><time class="post__date" datetime="2026-10-28">Oct 28, 2026</time><span class="post__title">Gezel and Knowledge</span><span class="post__summary">We're going to talk a little bit about indexing, knowledge, and how to improve the performance of models running locally on your devices.</span></span>
+          <span class="post__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li class="post"><a href="https://bendyline.com/posts/allaboutlocalmodels.html">
+          <span><time class="post__date" datetime="2026-10-27">Oct 27, 2026</time><span class="post__title">Everything You Need to Know about Local Models</span><span class="post__summary">The ideal is that you should never need to know much about local AI models. Apps like Gezel try to, or should try to, autoselect the best possible model for you. But if you're curious, or experimenting, you may want to know a bit more about AI models.</span></span>
+          <span class="post__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li class="post"><a href="https://bendyline.com/posts/howdocblocksusesgezelasanapi.html">
+          <span><span class="post__title">DocBlocks and how Gezel works as an API</span><span class="post__summary">DocBlocks started off as a simple markdown editor, but the vision has always been to let you do more with your content. Convert to video. Save off web pages. Produce slideshows. Quiz via flashcard. Act as a teleprompter.</span></span>
+          <span class="post__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li class="post"><a href="https://bendyline.com/posts/indexingandnightshift.html">
+          <span><span class="post__title">Indexing and the Night Shift in Gezel</span><span class="post__summary">Gezel uses the power of local AI models to assist you with work. Admittedly, local AI models are not nearly as powerful as cloud models, but for so many tasks, they can be so useful and get the job done.</span></span>
+          <span class="post__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li class="post"><a href="https://bendyline.com/posts/rtxsparkvstheworld.html">
+          <span><span class="post__title">RTX Spark vs. the World</span><span class="post__summary">This is the first in a series of articles on testing and evaluating local models. These tests compare complete Gezel/model/engine configurations across five computers. They show useful differences in inference speed and memory capacity.</span></span>
+          <span class="post__arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section section--tint" id="videos">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div>
+          <h2>Build with Bendyline on YouTube</h2>
+          <p>Demos, walkthroughs, and experiments. Many of my posts have a companion video, so pick whichever you prefer. Here's a good place to start:</p>
+        </div>
+        <a class="btn" href="https://www.youtube.com/@bendyline?sub_confirmation=1"><i class="fa-brands fa-youtube" aria-hidden="true"></i>Subscribe</a>
+      </div>
+
+      <ul class="videos">
+        <li class="card video">
+          <div class="video__thumb"><img src="https://i.ytimg.com/vi/bw1XFC6JcFA/sddefault.jpg" width="640" height="480" loading="lazy" alt=""><span class="video__play" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+          <div class="video__body"><p class="video__title"><a class="stretched" href="https://www.youtube.com/watch?v=bw1XFC6JcFA">Gezel Overview</a></p></div>
+        </li>
+        <li class="card video">
+          <div class="video__thumb"><img src="https://i.ytimg.com/vi/vzk9LDl5ZDQ/sddefault.jpg" width="640" height="480" loading="lazy" alt=""><span class="video__play" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+          <div class="video__body"><p class="video__title"><a class="stretched" href="https://www.youtube.com/watch?v=vzk9LDl5ZDQ">All About DocBlocks</a></p></div>
+        </li>
+        <li class="card video">
+          <div class="video__thumb"><img src="https://i.ytimg.com/vi/gMUBHnmHdyc/sddefault.jpg" width="640" height="480" loading="lazy" alt=""><span class="video__play" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+          <div class="video__body"><p class="video__title"><a class="stretched" href="https://www.youtube.com/watch?v=gMUBHnmHdyc">Everything You Need to Know about Local Models</a></p></div>
+        </li>
+      </ul>
+
+      <div class="section-actions">
+        <a class="text-link" href="https://www.youtube.com/@bendyline/videos">See all videos ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background -->
+  <section class="section" id="background">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Before Bendyline</h2>
+        <p>I spent more than 25 years at Microsoft and Mojang, mostly on developer platforms: the APIs, tools, and programs that let other people build.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <p class="timeline__org">Mojang Studios</p>
+          <div>
+            <h3>Minecraft creator platform</h3>
+            <ul>
+              <li>Launched the <a href="https://learn.microsoft.com/minecraft/creator/documents/scripting/introduction">scripting platform</a> for Minecraft Bedrock, which opened up whole new categories of add-on content.</li>
+              <li>Spec'd and largely built the Minecraft Creator Tools suite: <a href="https://mctools.dev">a website</a> for beginning to advanced creators, plus a <a href="https://www.npmjs.com/package/@minecraft/creator-tools">set of npm commands</a> and tools.</li>
+              <li>Managed the <a href="https://github.com/microsoft/minecraft-samples">Minecraft samples</a> and documentation, and produced the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel</a> on YouTube.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <p class="timeline__org">Microsoft 365</p>
+          <div>
+            <h3>Developer ecosystem marketing</h3>
+            <ul>
+              <li>As director, led developer marketing for Microsoft Teams, Microsoft Graph, SharePoint, and the broader Microsoft 365 platform.</li>
+              <li>Managed executive keynotes and end-to-end developer presence at major conferences, including Microsoft Build.</li>
+              <li>Launched the Microsoft 365 partner program with top ISV partners.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <p class="timeline__org">Bing Maps &amp; Yammer</p>
+          <div>
+            <h3>Maps platform and integration</h3>
+            <ul>
+              <li>Built APIs and platform for Bing Maps, including the mapping platform within Windows.</li>
+              <li>Led the technical integration of Yammer into Microsoft after the acquisition.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <p class="timeline__org">SharePoint &amp; Excel</p>
+          <div>
+            <h3>Platforms people still build on</h3>
+            <ul>
+              <li>Major areas of the <a href="https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/hh147178(v=office.14)">first SharePoint developer platform</a>, the cornerstone of a multi-billion-dollar ecosystem, and later its cloud app model.</li>
+              <li><a href="https://support.microsoft.com/en-us/office/add-a-background-color-to-a-sheet-tab-440b28f2-3146-4dca-95df-3b9d43acbe59">Sheet Tab Colors</a> and many other Excel features and platform pieces, a long time ago.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <p class="timeline__org">Aces Game Studio</p>
+          <div>
+            <h3>Combat Flight Simulator 3 &amp; Fighter Ace</h3>
+            <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Combat_Flight_Simulator_3">Program Manager</a> for the UX, several in-game experiences, and the tooling and platform for CFS3.</li>
+              <li>Ran Fighter Ace 3 with a partner developer.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-actions">
+        <a class="btn btn--ghost" href="resume.html">Read the full Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Off the clock -->
+  <section class="section section--tint" id="personal">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>When I'm not building software</h2>
+      </div>
+
+      <div class="personal">
+        <div class="card personal__card">
+          <span class="personal__icon" aria-hidden="true"><i class="fa-solid fa-caravan"></i></span>
+          <h3>Out and about</h3>
+          <p>I like to "camp" in my RV. The Winnebago lovingly referred to as "The Party Wagon" gets me out to see more of the world, and it's also quite the project, unfortunately. I'm always happy to trade road-trip spots and repair stories.</p>
+        </div>
+        <div class="card personal__card">
+          <span class="personal__icon" aria-hidden="true"><i class="fa-solid fa-floppy-disk"></i></span>
+          <h3>Stuff I built a long time ago</h3>
+          <p>A couple of DOS games from back in the day, still playable if you're feeling nostalgic:</p>
+          <ul>
+            <li><a href="https://archive.org/details/ToServeAndToProtect">To Serve and To Protect</a></li>
+            <li><a href="https://www.dosgames.com/game/snakefighter/">SnakeFighter</a></li>
+          </ul>
+        </div>
+        <div class="card personal__card">
+          <span class="personal__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+          <h3>Home base</h3>
+          <p>Sammamish, Washington, just east of Seattle. Naturally, <a href="https://qualla.com/sammamish-washington/">Qualla has some stories about it</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <p>Reach out by email or Bluesky. I'm always up for a conversation about platforms, developer tools, local AI, or RVs.</p>
+      <div class="hero__actions">
+        <a class="btn" href="mailto:mikeamm@bendyline.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email me</a>
+        <a class="btn btn--ghost" href="https://bsky.app/profile/mikeamm.bsky.social"><i class="fa-brands fa-bluesky" aria-hidden="true"></i>Bluesky</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Mike Ammerlaan · Sammamish, WA</span>
+    <span><a href="https://bendyline.com">Bendyline</a> · <a href="https://bendyline.com/posts/">Blog</a> · <a href="https://www.youtube.com/@bendyline">YouTube</a> · <a href="https://github.com/bendymike">GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+  // Keep "From the Bendyline blog" current: pull the newest posts from the
+  // blog index (bendyline.com allows cross-origin reads). If anything fails,
+  // the hand-written list above stays in place.
+  (async () => {
+    const BLOG = 'https://bendyline.com/posts/';
+    const MAX_POSTS = 5;
+    const list = document.getElementById('posts');
+    if (!list) return;
+
+    const clean = (s) => (s || '').replace(/\s+/g, ' ').trim();
+
+    // The blog index truncates long summaries with "…". Trim back to the last
+    // full sentence so the line clamp below doesn't stack a second ellipsis.
+    const tidy = (s) => {
+      if (!s.endsWith('…')) return s;
+      const cut = s.slice(0, -1).trimEnd();
+      if (/[.?!]$/.test(cut)) return cut;
+      const stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('? '), cut.lastIndexOf('! '));
+      return stop > 0 ? cut.slice(0, stop + 1) : s;
+    };
+
+    const formatDate = (iso) => {
+      const [y, m, d] = iso.split('-').map(Number);
+      return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+      });
+    };
+
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    };
+
+    const render = (post) => {
+      const li = el('li', 'post');
+      const a = el('a');
+      a.href = post.href;
+      const text = el('span');
+      if (post.date) {
+        const time = el('time', 'post__date', formatDate(post.date));
+        time.dateTime = post.date;
+        text.append(time);
+      }
+      text.append(el('span', 'post__title', post.title));
+      if (post.summary) text.append(el('span', 'post__summary', post.summary));
+      const arrow = el('span', 'post__arrow', '→');
+      arrow.setAttribute('aria-hidden', 'true');
+      a.append(text, arrow);
+      li.append(a);
+      return li;
+    };
+
+    try {
+      const res = await fetch(BLOG, { cache: 'no-cache' });
+      if (!res.ok) return;
+      const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+
+      // Each entry looks like: <li><a href="x.html">Title</a> · 2026-10-28 — Summary</li>
+      const posts = [];
+      for (const item of doc.querySelectorAll('li')) {
+        const link = item.querySelector('a[href]');
+        if (!link) continue;
+        const url = new URL(link.getAttribute('href'), BLOG);
+        if (url.protocol !== 'https:') continue;
+        const title = clean(link.textContent);
+        const full = clean(item.textContent);
+        const rest = full.startsWith(title) ? full.slice(title.length) : '';
+        const date = (rest.match(/^\s*·\s*(\d{4}-\d{2}-\d{2})/) || [])[1] || '';
+        const dash = rest.indexOf('—');
+        const summary = dash >= 0 ? tidy(rest.slice(dash + 1).trim()) : '';
+        if (title) posts.push({ href: url.href, title, date, summary });
+      }
+
+      if (posts.length) list.replaceChildren(...posts.slice(0, MAX_POSTS).map(render));
+    } catch (err) {
+      // Offline, blocked, or the blog index changed shape: keep the fallback list.
+    }
+  })();
+</script>
 </body>
 </html>

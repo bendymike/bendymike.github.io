@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- A page on ammerlaan.us. DocBlocks generates pages such as resume.html
+     through _templates/page.html: edit this template or the page's Markdown
+     (for example resume_files/resume.md), not the generated page.
+     A page opts in with this line in its Markdown frontmatter:
+       squisq-output-template: ../_templates/page.html -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><slot name="title">Page title</slot> &middot; ammerlaan.us</title>
+<meta name="description" content="Mike Ammerlaan builds software and software platforms. He runs Bendyline and spent more than 25 years on developer platforms at Microsoft and Mojang.">
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1a17" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235c4a3a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='29' font-weight='700' text-anchor='middle' fill='%23faf8f5'%3EMA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-name" href="../index.html">ammerlaan.us</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#bendyline">Bendyline</a>
+      <a href="../index.html#writing">Blog</a>
+      <a href="../index.html#videos">Videos</a>
+      <a href="../index.html#background">Background</a>
+      <a href="../resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+<main class="prose">
+<slot>
+  <h1>Page title</h1>
+  <p>This is the page template for ammerlaan.us. When DocBlocks saves a page that uses it, the page's content replaces this sample and its first heading fills the browser tab title.</p>
+  <h2>Writing a page</h2>
+  <p>Start with a heading. Everything after it is ordinary Markdown: <strong>bold</strong>, <em>emphasis</em>, <a href="../index.html">links</a>, lists, and quotes.</p>
+  <ul>
+    <li><p>The header, navigation, and footer live here, in one place.</p></li>
+    <li><p>Styles live in <code>site.css</code>, shared with the homepage.</p></li>
+  </ul>
+  <pre><code>squisq-output-template: ../_templates/page.html</code></pre>
+</slot>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Mike Ammerlaan · Sammamish, WA</span>
+    <span><a href="https://bendyline.com">Bendyline</a> · <a href="https://bendyline.com/posts/">Blog</a> · <a href="https://www.youtube.com/@bendyline">YouTube</a> · <a href="https://github.com/bendymike">GitHub</a></span>
+  </div>
+</footer>
+</body>
+</html>
