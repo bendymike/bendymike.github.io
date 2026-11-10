@@ -13,6 +13,58 @@
 <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1f1a17" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235c4a3a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='29' font-weight='700' text-anchor='middle' fill='%23faf8f5'%3EMA%3C/text%3E%3C/svg%3E">
+<style data-squisq>
+  .squisq-feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: center;
+    margin: 1.75em 0;
+  }
+  .squisq-feature--right { flex-direction: row-reverse; }
+  .squisq-feature__media {
+    flex: 0 0 42%;
+    min-width: 0;
+  }
+  .squisq-feature__media--empty { display: none; }
+  /* Default: image fills the media column. */
+  .squisq-feature__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  /* "Sized" media: the image carried explicit width/height attrs (the
+     WYSIWYG editor wrote them after a resize). Honor the attribute
+     values and center the image inside the media column with padding. */
+  .squisq-feature__media--sized {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  /* Leave width and height untouched here -- the HTML attributes set
+     the intrinsic dimensions, and CSS overrides would silently discard
+     the author's sizing. max-width: 100% still keeps the image from
+     overflowing the column on narrow viewports; HTML5 derives the
+     aspect ratio from the width/height pair so the scale stays right. */
+  .squisq-feature__media--sized img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  .squisq-feature__body {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .squisq-feature__body > :first-child { margin-top: 0; }
+  .squisq-feature__body > :last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .squisq-feature, .squisq-feature--right { flex-direction: column; }
+    .squisq-feature__media { flex-basis: auto; width: 100%; }
+  }
+</style>
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -31,25 +83,25 @@
 <main class="prose">
 <!-- squisq:content -->
 <h1>Mike Ammerlaan</h1>
-<p>Principal Product Manager &amp; Builder — Sammamish, WA</p>
-<ul><li><p><a href="mailto:ammerlaan@live.com">Email</a></p></li><li><p><a href="https://www.linkedin.com/in/mike-ammerlaan/">LinkedIn</a></p></li><li><p><a href="https://github.com/bendymike">GitHub</a></p></li><li><p><a href="https://ammerlaan.us">ammerlaan.us</a></p></li></ul>
+<p>Product Manager &amp; Builder — Sammamish, WA</p>
+<p><a href="mailto:ammerlaan@live.com">ammerlaan@live.com</a> · <a href="http://ammerlaan.us">ammerlaan.us</a> · <a href="https://www.linkedin.com/in/mike-ammerlaan/">LinkedIn</a> · <a href="https://github.com/bendymike">GitHub</a></p>
 <h2>Summary</h2>
 <p>Product leader who codes and ships. 27 years building developer platforms and creator ecosystems at Microsoft/Mojang — SharePoint, Microsoft 365, Bing Maps, and Minecraft — with a recent focus on hands-on building with agentic AI. I like turning APIs and tools into thriving ecosystems.</p>
 <p><strong>Focus:</strong> Product leadership · Developer platforms · Agentic AI · Creator ecosystems · APIs &amp; SDKs · Go-to-market</p>
 <h2>Experience</h2>
 <p><strong>Product Builder, Bendyline</strong></p>
 <p>July 2026 - current</p>
-<ul><li><p>Conceived, created, and built custom open source using agentic technologies:</p><ul><li><p><a href="https://docblocks.com">DocBlocks</a> - Markdown-based content editing site &amp; app</p></li><li><p><a href="https://qualla.com">Qualla</a> - Historical stories and content from around the world</p></li><li><p><a href="https://gezel.com">Gezel</a> - Agentic AI harness, framework and workflows</p></li></ul></li></ul>
+<ul><li><p>Founded and lead Bendyline, shipping world-class productivity and entertainment software</p></li><li><p>Architected and shipped open-source applications leveraging agentic AI:</p><ul><li><p><a href="https://docblocks.com">DocBlocks</a> - Markdown-based content editing site &amp; app</p></li><li><p><a href="https://qualla.com">Qualla</a> - Historical stories and content from around the world</p></li><li><p><a href="https://gezel.com">Gezel</a> - Agentic AI harness, framework and workflows</p></li></ul></li></ul>
 <p><strong>Principal Product Manager &amp; Builder — Minecraft, Mojang Studios</strong></p>
 <p>Dec 2023 – July 2026</p>
-<ul><li><p>Conceived, designed, and built most of <a href="https://mctools.dev">Minecraft Creator Tools</a> and the <a href="https://www.npmjs.com/package/@minecraft/creator-tools">@minecraft/creator-tools CLI</a>.</p></li><li><p>Shipped initial validator infrastructure and tools that raised content quality across hundreds of add-ons in the Minecraft Marketplace.</p></li><li><p>Delivered end-to-end web tooling for Minecraft spanning ~12 creator workloads.</p></li><li><p>Grew creator education via the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel</a>, including producing and running <a href="https://aka.ms/creatorcamp">Creator Camp</a>, an online conference for Minecraft creators that reached 2,000+ viewers.</p></li></ul>
+<ul><li><p>Designed and built <a href="https://mctools.dev">Minecraft Creator Tools</a> and the <a href="https://www.npmjs.com/package/@minecraft/creator-tools">@minecraft/creator-tools CLI</a>, enabling creators to automate workflows.</p></li><li><p>Shipped validator infrastructure that improved content quality metrics for 500+ add-ons in the Minecraft Marketplace.</p></li><li><p>Delivered end-to-end web tooling for Minecraft spanning ~12 creator workloads.</p></li><li><p>Grew creator education via the <a href="https://www.youtube.com/@minecraftcreatorchannel">Minecraft Creator Channel</a>, including producing and running <a href="https://aka.ms/creatorcamp">Creator Camp</a>, an online conference for Minecraft creators that reached 2,000+ viewers.</p></li></ul>
 <p><strong>Principal Product Manager — Minecraft Bedrock Platform, Mojang Studios</strong></p>
 <p>Jan 2021 – Dec 2023</p>
 <ul><li><p>Drove creator-platform execution for Minecraft Bedrock.</p></li><li><p>Shipped <a href="https://learn.microsoft.com/minecraft/creator/documents/scripting/introduction">Script APIs</a>, unlocking entirely new genres of Bedrock content and driving Marketplace engagement.</p></li><li><p>Established API design guidelines that brought consistency and coherence across the Bedrock creator surface.</p></li></ul>
 <p><strong>Director — Microsoft 365 Ecosystem Marketing</strong></p>
 <p>Aug 2016 – Jan 2021</p>
-<ul><li><p>Led developer marketing for Microsoft Teams, Microsoft Graph, SharePoint, and the broader Microsoft 365 platform.</p></li><li><p>Delivered online and in-person developer presence (keynotes, sessions, docs, samples) across the M365 ecosystem.</p></li><li><p>Conceived and launched the Microsoft 365 partner program; grew program to dozens of active partners, and owned key partner relationships.</p></li></ul>
-<p><strong>Principal / Senior Program Manager — Bing Maps</strong></p>
+<ul><li><p>Led developer marketing for Microsoft Teams, Microsoft Graph, SharePoint, and the broader Microsoft 365 platform.</p></li><li><p>Delivered online and in-person developer presence (keynotes, sessions, docs, samples) across the M365 ecosystem.</p></li><li><p>Launched the Microsoft 365 partner program, growing it to 50+ active partners and managing key relationships</p></li></ul>
+<p><strong>Principal Program Manager — Bing Maps</strong></p>
 <p>Nov 2013 – Aug 2016</p>
 <ul><li><p>Built APIs and platform projects for Bing Maps, including the mapping API and platform within Microsoft Windows.</p></li><li><p>Modernized the Bing Maps website on top of new underlying map technologies.</p></li></ul>
 <p><strong>Technical Integration Manager — Yammer, Inc. (acquired by Microsoft)</strong></p>

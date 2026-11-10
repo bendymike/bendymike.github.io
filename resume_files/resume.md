@@ -8,18 +8,15 @@ squisq-output-template: ../_templates/page.html
 ---
 # Mike Ammerlaan
 
-Principal Product Manager & Builder — Sammamish, WA
+Product Manager & Builder — Sammamish, WA
 
-- [Email](mailto:ammerlaan@live.com)
-- [LinkedIn](https://www.linkedin.com/in/mike-ammerlaan/)
-- [GitHub](https://github.com/bendymike)
-- [ammerlaan.us](https://ammerlaan.us)
+[ammerlaan@live.com](mailto:ammerlaan@live.com) · [ammerlaan.us](http://ammerlaan.us) · [LinkedIn](https://www.linkedin.com/in/mike-ammerlaan/) · [GitHub](https://github.com/bendymike)
 
 ## Summary
 
 Product leader who codes and ships. 27 years building developer platforms and creator ecosystems at Microsoft/Mojang — SharePoint, Microsoft 365, Bing Maps, and Minecraft — with a recent focus on hands-on building with agentic AI. I like turning APIs and tools into thriving ecosystems.
 
-**Focus:** Product leadership · Developer platforms · Agentic AI · Creator ecosystems · APIs & SDKs · Go-to-market
+**Focus:** Product leadership · Developer platforms · Agentic AI · Creator ecosystems · APIs & SDKs · Go-to-market  
 
 
 ## Experience
@@ -28,7 +25,8 @@ Product leader who codes and ships. 27 years building developer platforms and cr
 
 July 2026 - current
 
-- Conceived, created, and built custom open source using agentic technologies:
+- Founded and lead Bendyline, shipping world-class productivity and entertainment software
+- Architected and shipped open-source applications leveraging agentic AI:
   - [DocBlocks](https://docblocks.com) - Markdown-based content editing site & app
   - [Qualla](https://qualla.com) - Historical stories and content from around the world
   - [Gezel](https://gezel.com) - Agentic AI harness, framework and workflows
@@ -38,8 +36,8 @@ July 2026 - current
 
 Dec 2023 – July 2026
 
-- Conceived, designed, and built most of [Minecraft Creator Tools](https://mctools.dev) and the [@minecraft/creator-tools CLI](https://www.npmjs.com/package/@minecraft/creator-tools).
-- Shipped initial validator infrastructure and tools that raised content quality across hundreds of add-ons in the Minecraft Marketplace.
+- Designed and built [Minecraft Creator Tools](https://mctools.dev) and the [@minecraft/creator-tools CLI](https://www.npmjs.com/package/@minecraft/creator-tools), enabling creators to automate workflows.
+- Shipped validator infrastructure that improved content quality metrics for 500+ add-ons in the Minecraft Marketplace.
 - Delivered end-to-end web tooling for Minecraft spanning ~12 creator workloads.
 - Grew creator education via the [Minecraft Creator Channel](https://www.youtube.com/@minecraftcreatorchannel), including producing and running [Creator Camp](https://aka.ms/creatorcamp), an online conference for Minecraft creators that reached 2,000+ viewers.
 
@@ -59,10 +57,10 @@ Aug 2016 – Jan 2021
 
 - Led developer marketing for Microsoft Teams, Microsoft Graph, SharePoint, and the broader Microsoft 365 platform.
 - Delivered online and in-person developer presence (keynotes, sessions, docs, samples) across the M365 ecosystem.
-- Conceived and launched the Microsoft 365 partner program; grew program to dozens of active partners, and owned key partner relationships.
+- Launched the Microsoft 365 partner program, growing it to 50+ active partners and managing key relationships
 
 
-**Principal / Senior Program Manager — Bing Maps**
+**Principal Program Manager — Bing Maps**
 
 Nov 2013 – Aug 2016
 
